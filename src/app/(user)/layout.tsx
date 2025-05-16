@@ -1,19 +1,18 @@
-import '../app/globals.css';
-import { inter, roboto, figtree, barlow } from '../lib/fonts';
+import '../../app/user-globals.css';
+import { inter, roboto, figtree, barlow } from '../../lib/fonts';
 import Navbar from './navbar';
 
-export default function RootLayout({
+export default function HomeLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable} ${figtree.variable} ${barlow.variable}`}>
-      <body className="bg-home-gradient min-h-screen"> 
-        <Navbar/>
-        {/* {children} */}
+      <body className="bg-home-gradient min-h-screen">
+        <Navbar />
+        {children}
       </body>
-
     </html>
   );
 }
