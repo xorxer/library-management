@@ -11,7 +11,13 @@ module.exports = {
         roboto: ['var(--font-roboto)', 'sans-serif'],
         figtree: ['var(--font-figtree)', 'sans-serif'],
         barlow: ['var(--font-barlow)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
       },
+      colors: {
+        lightgray: {
+          100: '#B3B3B3'
+        }
+      }
     },
   },
 };

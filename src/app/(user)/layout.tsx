@@ -1,5 +1,5 @@
 import '../../app/user-globals.css';
-import { inter, roboto, figtree, barlow } from '../../lib/fonts';
+import { inter, roboto, figtree, barlow, poppins } from '../../lib/fonts';
 import Navbar from './navbar';
 
 export default function HomeLayout({
@@ -8,7 +8,7 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto.variable} ${figtree.variable} ${barlow.variable}`}>
+    <html lang="en" className={`${inter.variable} ${roboto.variable} ${figtree.variable} ${barlow.variable} ${poppins.variable}`}>
       <body className="bg-home-gradient min-h-screen">
         <Navbar />
         {children}

@@ -1,4 +1,4 @@
-import { Inter, Roboto, Figtree, Barlow } from 'next/font/google';
+import { Inter, Roboto, Figtree, Barlow, Poppins } from 'next/font/google';
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -27,3 +27,10 @@ export const barlow = Barlow({
   weight: ['400', '500', '700', '900'],
   display: 'swap',
 });
+
+export const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['200', '600'],
+  display: 'swap',
+})
