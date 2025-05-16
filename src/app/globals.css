@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.js";
 
-/* Custom blue gradient background utility */
 @layer utilities {
   .bg-home-gradient {
     background: linear-gradient(
