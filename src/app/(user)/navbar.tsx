@@ -14,13 +14,13 @@ export default function Navbar() {
     return (
         <nav className="flex items-center justify-between px-6 py-4 bg-home-gradient navbar">
             <div className="flex items-center space-x-3">
-                <Link href="/" className="flex items-center gap-2 font-figtree font-bold text-xl no-underline text-white">
+                <Link href="/" className="flex items-center gap-2 font-figtree font-bold no-underline text-white">
                     <LogoIcon
                             width={50}
                             height={50}
                             style={{color: "white"}}
                     />
-                    <span className="font-figtree font-bold">Alcove</span>
+                    <span className="font-figtree font-bold text-3xl">Alcove</span>
                 </Link>
             </div>
             <div className="flex flex-row space-x-5">

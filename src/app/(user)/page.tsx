@@ -13,29 +13,29 @@ export default function HomePage() {
   return (
     <>
       <div className="flex-col">
-        <div className="flex-row">
-          <div>{book.title}</div>
+        <div className="flex-row ml-15 max-w-2xl w-full mx-auto">
+          <h1 className="font-figtree font-bold text-4xl text-white mb-2">{book.title}</h1>
           <div className="flex flex-row items-center gap-x-8 mb-2">
             <div>
-              <span>By </span>
-              <span>{book.author}</span>
+              <span className="font-inter font-medium text-1xl text-lightgray-100">By </span>
+              <span className="font-inter font-medium text-1xl text-lightgold-100">{book.author}</span>
             </div>
             <div>
-              <span>Category: </span>
-              <span>{book.category}</span>
+              <span className="font-inter font-medium text-1xl text-lightgray-100">Category: </span>
+              <span className="font-inter font-medium text-1xl text-lightgold-100">{book.category}</span>
             </div>
           </div>
           <div className="flex flex-row items-center gap-x-8 mb-2">
             <div>
-              <span>Total Books: </span>
-              <span>{book.total_books}</span>
+              <span className="font-inter font-medium text-1xl text-lightgray-100">Total Books: </span>
+              <span className="font-inter font-medium text-1xl text-lightgold-100">{book.total_books}</span>
             </div>
             <div>
-              <span>Available Books: </span>
-              <span>{book.available_books}</span>
+              <span className="font-inter font-medium text-1xl text-lightgray-100">Available Books: </span>
+              <span className="font-inter font-medium text-1xl text-lightgold-100">{book.available_books}</span>
             </div>
           </div>
-          <p>{book.description}</p>
+          <p className="font-inter font-medium text-1xl text-lightgray-100">{book.description}</p>
           {/* Insert details button */}
         </div>
         {/* Insert book */}

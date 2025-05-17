@@ -16,6 +16,9 @@ module.exports = {
       colors: {
         lightgray: {
           100: '#B3B3B3'
+        },
+        lightgold: {
+          100: '#E4C798'
         }
       }
     },
