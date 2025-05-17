@@ -1,3 +1,5 @@
+import { AiFillRead } from "react-icons/ai";
+import { Button } from "@/components/ui/button";
 
 const book = {
     title: "Automate the Boring Stuff with Python",
@@ -35,8 +37,12 @@ export default function HomePage() {
               <span className="font-inter font-medium text-1xl text-lightgold-100">{book.available_books}</span>
             </div>
           </div>
-          <p className="font-inter font-medium text-1xl text-lightgray-100">{book.description}</p>
+          <p className="font-inter font-medium text-1xl text-lightgray-100 mb-4">{book.description}</p>
           {/* Insert details button */}
+          <Button className="flex justify-center items-center bg-lightgold-100 w-32 md:w-48 lg:w-64">
+            <AiFillRead  className="!size-5"/>
+            <span className="font-figtree font-bold text-xl">Details</span>
+          </Button>
         </div>
         {/* Insert book */}
       </div>
