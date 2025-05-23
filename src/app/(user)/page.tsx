@@ -1,5 +1,6 @@
 import { AiFillRead } from "react-icons/ai";
 import { Button } from "@/components/ui/button";
+import Book3D from "@/components/book/book3d";
 
 const book = {
     title: "Automate the Boring Stuff with Python",
@@ -45,6 +46,7 @@ export default function HomePage() {
           </Button>
         </div>
         {/* Insert book */}
+        <Book3D cover={"/automate book.jpg"} spineColor={"#F7E479"} />
       </div>
     </>
   );
