@@ -54,7 +54,7 @@ export default function HomePage() {
           </div>
           {/* Display book on top */}
           <div className="relative z-10">
-            <Book3D cover={"/automate book.jpg"} spineColor={"#F7E479"} />
+            <Book3D cover={"/automate book.jpg"} spineColor={"#F7E479"}/>
           </div>
         </div>
       </div>
