@@ -15,8 +15,9 @@ const book = {
 export default function HomePage() {
   return (
     <>
-      <div className="flex-col">
-        <div className="flex-row ml-15 max-w-2xl w-full mx-auto">
+      <div className="flex flex-row items-center gap-x-20 px-4 pl-20 items-start">
+        {/* Book info section */}
+        <div className="max-w-2xl w-full">
           <h1 className="font-figtree font-bold text-4xl text-white mb-2">{book.title}</h1>
           <div className="flex flex-row items-center gap-x-8 mb-2">
             <div>
@@ -39,15 +40,25 @@ export default function HomePage() {
             </div>
           </div>
           <p className="font-inter font-medium text-1xl text-lightgray-100 mb-4">{book.description}</p>
-          {/* Insert details button */}
+          {/* Details button */}
           <Button className="flex justify-center items-center bg-lightgold-100 w-32 md:w-48 lg:w-64">
-            <AiFillRead  className="!size-5"/>
+            <AiFillRead className="!size-5"/>
             <span className="font-figtree font-bold text-xl">Details</span>
           </Button>
         </div>
-        {/* Insert book */}
-        <Book3D cover={"/automate book.jpg"} spineColor={"#F7E479"} />
+        {/* 3D Book on display */}
+        <div>
+          {/* Faded out display book */}
+          <div className="absolute transform rotate-14 opacity-30 pl-20 pt-8">
+            <Book3D cover={"/automate book.jpg"} spineColor={"#F7E479"} />
+          </div>
+          {/* Display book on top */}
+          <div className="relative z-10">
+            <Book3D cover={"/automate book.jpg"} spineColor={"#F7E479"} />
+          </div>
+        </div>
       </div>
+
     </>
   );
 }

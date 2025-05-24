@@ -12,7 +12,7 @@ interface Book3DProps {
 
 export default function Book3D({ cover, width = 320, height = 425, spineColor="white" }: Book3DProps) {
     return (
-        <>
+        <div>
                 {/* Book spine and cover side by side, top-aligned */}
                 <div className="flex flex-row items-start">
                     <BookSpine
@@ -29,6 +29,6 @@ export default function Book3D({ cover, width = 320, height = 425, spineColor="w
                 <BookPages
                     style={{ marginTop: -13 }}
                 />
-        </>
+        </div>
     )
 }
