@@ -49,53 +49,44 @@ export default function HomePage() {
         {/* 3D Books on display */}
         <div className="relative flex items-center justify-center w-full lg:w-auto pr-4 md:pr-8 lg:pr-12">
           {/* Faded out display book */}
-          <div className="absolute transform rotate-12 opacity-30 pl-4 md:pl-8 lg:pl-20 pt-4 md:pt-8">
+          {/* <div className="absolute transform rotate-12 opacity-30 pl-4 md:pl-8 lg:pl-20 pt-4 md:pt-8">
             <Book3D
               cover="/automate book.jpg"
               spineColor="#F7E479"
               width={320}
               height={425}
             />
-          </div>
+          </div> */}
           {/* Display book on top */}
-          <div className="relative z-10">
+          {/* <div className="relative z-10">
             <Book3D
               cover="/automate book.jpg"
               spineColor="#F7E479"
               width={320}
               height={425}
             />
-          </div>
+          </div> */}
         </div>
       </div>
-      {/* Popular books section */}
-      <div className="max-w-7xl">
-        {/* Header */}
-        <h2 
-          className="font-figtree font-bold text-3xl md:text-4xl text-white text-left ml-15 mt-5 mb-12"
-        >
+      <div>
+        <h2 className="font-figtree font-bold text-3xl md:text-4xl text-white text-left ml-15 mt-5 mb-12">
           Popular Books
         </h2>
-        {/* Books Grid */}
-        <div className="grid grid-rows-4 gap-4">
-          <div>
-            {books.map((book, index) => (
-              <div
-                key={index}
-              >
-                <Book3D
-                  cover="/automate book.jpg"
-                  spineColor="#F7E479"
-                  width={320}
-                  height={425}
-                  scale={0.375}
-                />
-                <span className="font-inter font-medium text-1xl text-lightgray-100">{book.category}</span>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {books.map((book, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <Book3D
+                cover="/automate book.jpg"
+                spineColor="#F7E479"
+              />
+              <span className="font-inter font-medium text-1xl text-lightgray-100 mt-1">
+                {book.category}
+              </span>
+            </div>
+          ))}
         </div>
-      </div>
+    </div>
+
     </>
   );
 }
