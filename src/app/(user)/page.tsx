@@ -68,6 +68,34 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      {/* Popular books section */}
+      <div className="max-w-7xl">
+        {/* Header */}
+        <h2 
+          className="font-figtree font-bold text-3xl md:text-4xl text-white text-left ml-15 mt-5 mb-12"
+        >
+          Popular Books
+        </h2>
+        {/* Books Grid */}
+        <div className="grid grid-rows-4 gap-4">
+          <div>
+            {books.map((book, index) => (
+              <div
+                key={index}
+              >
+                <Book3D
+                  cover="/automate book.jpg"
+                  spineColor="#F7E479"
+                  width={320}
+                  height={425}
+                  scale={0.375}
+                />
+                <span className="font-inter font-medium text-1xl text-lightgray-100">{book.category}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 }
