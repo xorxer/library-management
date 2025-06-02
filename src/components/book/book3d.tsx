@@ -16,7 +16,7 @@ export default function Book3D({
   spineColor = "white", // Default spine color
 }: Book3DProps) {
   return (
-    <div>
+    <div className="scale-30 -m-35">
       <div className="flex flex-row items-start">
         <BookSpine style={{ color: spineColor, marginRight: -2 }} />
         <Image
