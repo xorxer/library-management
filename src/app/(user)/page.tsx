@@ -74,10 +74,12 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div>
-        <h2 className="font-figtree font-bold text-3xl md:text-4xl text-white text-left ml-15 mt-5 mb-12">
-          Popular Books
-        </h2>
+      <div className="flex flex-col px-4 lg:px-20 py-8">
+        <div className="flex justify-center lg:justify-between">
+          <h2 className="font-figtree font-bold text-3xl md:text-4xl text-white text-left mt-5 mb-12">
+            Popular Books
+          </h2>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {books.map((book, index) => (
              <div key={index} className="text-center">
