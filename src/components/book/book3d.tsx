@@ -7,6 +7,10 @@ interface Book3DProps {
   width?: number;
   height?: number;
   spineColor: string;
+  // The three below are required because they determine flex size
+  spineClassName: string;
+  coverClassName: string;
+  pagesClassName: string;
 }
 
 export default function Book3D({
@@ -14,21 +18,24 @@ export default function Book3D({
   width = 320, // Original book cover width
   height = 425, // Original book cover height
   spineColor = "white", // Default spine color
+  spineClassName = "",
+  coverClassName = "",
+  pagesClassName = ""
 }: Book3DProps) {
   return (
     <div className="flex justify-center">
         <div className="flex flex-col">
           <div className="flex flex-row items-start">
-              <BookSpine className="w-4" style={{color: spineColor, marginRight: -1}}/>
+              <BookSpine className={spineClassName} style={{color: spineColor, marginRight: -1}}/>
               <Image
                 src={cover}
                 alt="Book Cover"
                 width={320}
                 height={425}
-                className="w-49.25"
+                className={coverClassName}
                 />
           </div>
-          <BookPages className="w-53" style={{ marginTop: -8 }} />
+          <BookPages className={pagesClassName} />
         </div>
     </div>
   );

@@ -49,23 +49,29 @@ export default function HomePage() {
         {/* 3D Books on display */}
         <div className="relative flex items-center justify-center w-full lg:w-auto pr-4 md:pr-8 lg:pr-12">
           {/* Faded out display book */}
-          {/* <div className="absolute transform rotate-12 opacity-30 pl-4 md:pl-8 lg:pl-20 pt-4 md:pt-8">
+          <div className="absolute transform rotate-12 opacity-30 pl-4 md:pl-8 lg:pl-20 pt-4 md:pt-8">
             <Book3D
               cover="/automate book.jpg"
               spineColor="#F7E479"
               width={320}
               height={425}
+              spineClassName="h-87.5"
+              coverClassName="w-64"
+              pagesClassName="w-69 -mt-3"
             />
-          </div> */}
+          </div>
           {/* Display book on top */}
-          {/* <div className="relative z-10">
+          <div className="relative z-10">
             <Book3D
               cover="/automate book.jpg"
               spineColor="#F7E479"
               width={320}
               height={425}
+              spineClassName="h-87.5"
+              coverClassName="w-64"
+              pagesClassName="w-69 -mt-3"
             />
-          </div> */}
+          </div>
         </div>
       </div>
       <div>
@@ -76,9 +82,14 @@ export default function HomePage() {
           {books.map((book, index) => (
              <div key={index} className="text-center">
               <div className="aspect-w-4 aspect-h-3">
+                {/* Based on visual testing, best sizing for small grid books is: */}
+                {/* Spine - w-4; Cover - w-49.25; Pages - w-53 */}
                 <Book3D
                   cover="/automate book.jpg"
                   spineColor="#F7E479"
+                  spineClassName="w-4"
+                  coverClassName="w-49.25"
+                  pagesClassName="w-53 -mt-2.5"
                   />
               </div>
               <div className="p-4">
