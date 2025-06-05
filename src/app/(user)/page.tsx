@@ -72,16 +72,20 @@ export default function HomePage() {
         <h2 className="font-figtree font-bold text-3xl md:text-4xl text-white text-left ml-15 mt-5 mb-12">
           Popular Books
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {books.map((book, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <Book3D
-                cover="/automate book.jpg"
-                spineColor="#F7E479"
-              />
-              <span className="font-inter font-medium text-1xl text-lightgray-100 mt-1">
-                {book.category}
-              </span>
+             <div key={index} className="text-center">
+              <div className="aspect-w-4 aspect-h-3">
+                <Book3D
+                  cover="/automate book.jpg"
+                  spineColor="#F7E479"
+                  />
+              </div>
+              <div className="p-4">
+                <span className="font-inter font-medium text-1xl text-lightgray-100 mt-1">
+                  {book.category}
+                </span>
+              </div>
             </div>
           ))}
         </div>
