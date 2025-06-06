@@ -76,14 +76,14 @@ export default function HomePage() {
       </div>
       <div className="flex flex-col px-4 lg:px-20 py-8">
         <div className="flex justify-center lg:justify-between">
-          <h2 className="font-figtree font-bold text-3xl md:text-4xl text-white text-left mt-5 mb-12">
+          <h2 className="font-barlow font-bold text-2xl md:text-3xl text-white text-left mt-5 mb-12">
             Popular Books
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {books.map((book, index) => (
              <div key={index} className="text-center">
-              <div className="aspect-w-4 aspect-h-3">
+              <div className="">
                 {/* Based on visual testing, best sizing for small grid books is: */}
                 {/* Spine - w-4; Cover - w-49.25; Pages - w-53 */}
                 <Book3D
@@ -94,8 +94,11 @@ export default function HomePage() {
                   pagesClassName="w-53 -mt-2.5"
                   />
               </div>
-              <div className="p-4">
-                <span className="font-inter font-medium text-1xl text-lightgray-100 mt-1">
+              <div className="p-4 flex flex-col items-center">
+                <span className="font-figtree font-bold text-base text-white block w-49.25 truncate">
+                  {book.title}
+                </span>
+                <span className="font-inter font-medium italic text-base text-lightgray-100 mt-1 block w-49.25 truncate">
                   {book.category}
                 </span>
               </div>
