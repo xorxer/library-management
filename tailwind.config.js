@@ -17,6 +17,9 @@ module.exports = {
         lightgray: {
           100: '#B3B3B3'
         },
+        darkgray: {
+          100: '#808080'
+        },
         lightgold: {
           100: '#E4C798',
           200: '#D9B880'
