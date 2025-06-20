@@ -23,6 +23,9 @@ module.exports = {
         lightgold: {
           100: '#E4C798',
           200: '#D9B880'
+        },
+        blues: {
+          100: '#2A304B'
         }
       }
     },
